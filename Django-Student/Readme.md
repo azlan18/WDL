@@ -9,3 +9,6 @@ Run following commands when asked to set venv and make django project:
 7) python manage.py migrate
 8) python manage.py startapp app_name 
 9) python manage.py runserver
+
+    Admin: azlan
+   pswd: azlan123
