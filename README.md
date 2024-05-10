@@ -16,10 +16,12 @@ Now install django
     pip list #to check if installed
 ------------------------------------------------------------------------------------------------------------------------
 Start project #Ignore if cloning project
-- django-admin startproject proj_name
-- cd proj_name
-- python manage.py createapp myapp #create your views, templates, urls, models here
+    
+    django-admin startproject proj_name
+    cd proj_name
+    python manage.py createapp myapp #create your views, templates, urls, models here
 ------------------------------------------------------------------------------------------------------------------------
-# After making any changes to a model run:
--python manage.py makemigrations
--python manage.py migrate
+ After making any changes to a model run:
+
+    python manage.py makemigrations
+    python manage.py migrate
