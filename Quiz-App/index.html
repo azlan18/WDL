@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz App</title>
+    <style>
+      /* CSS styles */
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .quiz-container {
+        max-width: 500px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      #question-container {
+        margin-bottom: 20px;
+      }
+
+      #question-text {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      #answer-buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+      }
+
+      button {
+        height: 40px;
+        font-size: 16px;
+        background-color: #eaeaea;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #d2d2d2;
+      }
+
+      #controls-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="quiz-container">
+      <h1>Quiz App</h1>
+      <div id="question-container">
+        <p id="question-text"></p>
+        <div id="answer-buttons"></div>
+      </div>
+      <div id="score-container">
+        <p>Score: <span id="score">0</span></p>
+      </div>
+    </div>
+
+    <script>
+      // Define an array of quiz questions
+      const quizQuestions = [
+        {
+          question: "What is the capital of France?",
+          options: ["Paris", "London", "Berlin", "Rome"],
+          correctAnswer: "Paris",
+        },
+        {
+          question: "Which planet is known as the Red Planet?",
+          options: ["Venus", "Mars", "Jupiter", "Saturn"],
+          correctAnswer: "Mars",
+        },
+        {
+          question: "What is the chemical symbol for gold?",
+          options: ["Au", "Ag", "Cu", "Fe"],
+          correctAnswer: "Au",
+        },
+        {
+          question: "Which technology is used for styling web pages?",
+          options: ["HTML", "CSS", "JavaScript", "Python"],
+          correctAnswer: "CSS",
+        },
+      ];
+
+      // Variables to track quiz state
+      let currentQuestionIndex = 0;
+      let score = 0;
+
+      // Function to start the quiz
+      function startQuiz() {
+        displayQuestion();
+      }
+
+      // Function to display a question and its options
+      function displayQuestion() {
+        const currentQuestion = quizQuestions[currentQuestionIndex];
+        const questionText = document.getElementById("question-text");
+        const answerButtons = document.getElementById("answer-buttons");
+        const scoreElement = document.getElementById("score");
+
+        // Clear previous question and answer options
+        questionText.innerHTML = "";
+        answerButtons.innerHTML = "";
+
+        // Display the current question
+        questionText.innerHTML = currentQuestion.question;
+
+        // Create answer buttons for each option
+        currentQuestion.options.forEach((option) => {
+          const button = document.createElement("button");
+          button.innerText = option;
+          button.classList.add("answer-button");
+          answerButtons.appendChild(button);
+
+          // Add click event listener to check the answer
+          button.addEventListener("click", function () {
+            checkAnswer(option);
+          });
+        });
+
+        // Update the score
+        scoreElement.textContent = score;
+      }
+
+      // Function to check the selected answer
+      function checkAnswer(selectedOption) {
+        const currentQuestion = quizQuestions[currentQuestionIndex];
+
+        // Check if the selected answer is correct
+        if (selectedOption === currentQuestion.correctAnswer) {
+          score++;
+        }
+
+        // Move to the next question or end the quiz if all questions are answered
+        currentQuestionIndex++;
+
+        if (currentQuestionIndex < quizQuestions.length) {
+          displayQuestion();
+        } else {
+          endQuiz();
+        }
+      }
+
+      // Function to end the quiz
+      function endQuiz() {
+        const questionContainer = document.getElementById("question-container");
+        const scoreContainer = document.getElementById("score-container");
+
+        // Display the final score
+        questionContainer.innerHTML = `
+        <h2>Quiz Completed!</h2>
+        <p>Your Score: ${score} out of ${quizQuestions.length}</p>
+      `;
+
+        // Hide the score container
+        scoreContainer.style.display = "none";
+      }
+
+      // Add event listener to start the quiz when the page loads
+      window.addEventListener("load", startQuiz);
+    </script>
+  </body>
+</html>
