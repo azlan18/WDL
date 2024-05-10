@@ -11,8 +11,9 @@ Activate virtual env:
 -.\myenv\scripts\activate
 
 Now install django
--pip install django
--pip list #to check if installed
+
+    pip install django
+    pip list #to check if installed
 ------------------------------------------------------------------------------------------------------------------------
 Start project #Ignore if cloning project
 - django-admin startproject proj_name
