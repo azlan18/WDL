@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Todo List</h1>
+
+<table style="border-collapse: collapse; width: 60%; margin: auto; text-align: left;">
+    <thead>
+        <tr style="background-color: #f2f2f2;">
+            <th style="padding: 8px; border: 1px solid #ddd;">Title</th>
+            <th style="padding: 8px; border: 1px solid #ddd;">Status</th>
+            <th style="padding: 8px; border: 1px solid #ddd;">Due</th> <!-- New Due Column -->
+        </tr>
+    </thead>
+    <tbody>
+        {% for todo in todos %}
+        <tr {% if not todo.completed %} style="background-color: #f9f9f9;" {% endif %}>
+            <td style="padding: 8px; border: 1px solid #ddd;">{{ todo.title }}</td>
+            <td style="padding: 8px; border: 1px solid #ddd;">
+                {% if todo.completed %} Completed {% else %} Not Completed {% endif %}
+            </td>
+            <td style="padding: 8px; border: 1px solid #ddd;">{{ todo.due }}</td> <!-- Display Due Date -->
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
