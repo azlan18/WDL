@@ -1,14 +1,16 @@
 For any Django projects:
 Create project directory
 
--mkdir dir
-cd dir
+    mkdir dir
+    cd dir
 
 Create Virtual env:
-python -m venv myenv
+    
+    python -m venv myenv
 
 Activate virtual env:
--.\myenv\scripts\activate
+
+    .\myenv\scripts\activate
 
 Now install django
 
