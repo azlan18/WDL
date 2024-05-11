@@ -27,3 +27,7 @@ Start project #Ignore if cloning project
 
     python manage.py makemigrations
     python manage.py migrate
+
+Start server
+
+    python manage.py runserver
