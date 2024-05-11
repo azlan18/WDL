@@ -21,7 +21,7 @@ Start project #Ignore if cloning project
     
     django-admin startproject proj_name
     cd proj_name
-    python manage.py createapp myapp #create your views, templates, urls, models here
+    python manage.py startapp myapp #create your views, templates, urls, models here
 ------------------------------------------------------------------------------------------------------------------------
  After making any changes to a model run:
 
