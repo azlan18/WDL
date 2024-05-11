@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="main-nav container flex">
+        <a href="index.html" onclick="reload()" class="company-logo">
+          <img src="newslogo.jpg" alt="company logo" />
+        </a>
+        <div class="nav-links">
+          <ul class="flex">
+            <li
+              class="hover-link nav-item"
+              id="ipl"
+              onclick="onNavItemClick('ipl')"
+            >
+              IPL
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="finance"
+              onclick="onNavItemClick('finance')"
+            >
+              Finance
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="politics"
+              onclick="onNavItemClick('politics')"
+            >
+              Politics
+            </li>
+            <li class="hover-link nav-item">
+              <a href="#contact">Contact Us</a>
+            </li>
+            <!-- Link to Contact Us section -->
+            <li class="hover-link nav-item">
+              <a href="about.html">About Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="search-bar flex">
+          <input
+            id="search-text"
+            type="text"
+            class="news-input"
+            placeholder="e.g. Science"
+          />
+          <button id="search-button" class="search-button">Search</button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="card-container">
+      <!-- Card content -->
+      <div class="card">
+        <div class="card-header">
+          <img src="photo1.jpg" alt="news-image" />
+        </div>
+        <div class="card-content">
+          <h3 class="news-title">This is the Title</h3>
+          <p class="news-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos magni
+            odit sint maiores non iusto dicta asperiores laboriosam eos
+            pariatur.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img src="https://via.placeholder.com/400x200" alt="news-image" />
+        </div>
+        <div class="card-content">
+          <h3 class="news-title">Another Title</h3>
+          <p class="news-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos magni
+            odit sint maiores non iusto dicta asperiores laboriosam eos
+            pariatur.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img src="https://via.placeholder.com/400x200" alt="news-image" />
+        </div>
+        <div class="card-content">
+          <h3 class="news-title">Title 3</h3>
+          <p class="news-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos magni
+            odit sint maiores non iusto dicta asperiores laboriosam eos
+            pariatur.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img src="https://via.placeholder.com/400x200" alt="news-image" />
+        </div>
+        <div class="card-content">
+          <h3 class="news-title">Title 4</h3>
+          <p class="news-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos magni
+            odit sint maiores non iusto dicta asperiores laboriosam eos
+            pariatur.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <section id="contact">
+      <!-- Contact Us section -->
+      <h2>Contact Us</h2>
+      <p>
+        If you have any questions or inquiries, please fill out the form below
+        or contact us via email or phone:
+      </p>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required /><br /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br /><br />
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea
+        ><br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+      <address>
+        Email: info@example.com<br />
+        Phone: 123-456-7890
+      </address>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 News App. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

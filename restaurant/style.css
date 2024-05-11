@@ -1,0 +1,13 @@
+/* Custom CSS for adjusting image height and text alignment */
+.service-item,
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-item img,
+.menu-item img {
+  height: 200px; /* Adjust the height as needed */
+  margin-bottom: 20px; /* Add spacing between image and text */
+}

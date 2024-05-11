@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    /* Add custom styles here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-group label {
+      font-weight: bold;
+    }
+    #feedback-output {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Feedback Form</h2>
+  <form id="feedback-form">
+    <div class="form-group">
+      <label for="question1">How satisfied are you with our service?</label>
+      <select class="form-control" id="question1">
+        <option value="very-satisfied">Very Satisfied</option>
+        <option value="satisfied">Satisfied</option>
+        <option value="neutral">Neutral</option>
+        <option value="unsatisfied">Unsatisfied</option>
+        <option value="very-unsatisfied">Very Unsatisfied</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="question2">Would you recommend us to your friends?</label>
+      <select class="form-control" id="question2">
+        <option value="definitely">Definitely</option>
+        <option value="probably">Probably</option>
+        <option value="maybe">Maybe</option>
+        <option value="unlikely">Unlikely</option>
+        <option value="never">Never</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="question3">How easy was it to use our website?</label>
+      <select class="form-control" id="question3">
+        <option value="very-easy">Very Easy</option>
+        <option value="easy">Easy</option>
+        <option value="neutral">Neutral</option>
+        <option value="difficult">Difficult</option>
+        <option value="very-difficult">Very Difficult</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Feedback</button>
+  </form>
+
+  <div id="feedback-output"></div>
+</div>
+
+<!-- JavaScript -->
+<script>
+  document.getElementById('feedback-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const q1 = document.getElementById('question1').value;
+    const q2 = document.getElementById('question2').value;
+    const q3 = document.getElementById('question3').value;
+    const feedback = `Thank you for your feedback! You rated our service as ${q1}, your likelihood to recommend us as ${q2}, and the ease of using our website as ${q3}.`;
+
+    document.getElementById('feedback-output').innerHTML = `<div class="alert alert-success" role="alert">${feedback}</div>`;
+  });
+</script>
+</body>
+</html>
+

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SuperMeals Restaurant</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Custom CSS */
+      /* Add your custom CSS styles here */
+      #map {
+        margin: 0 auto;
+        max-width: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">SuperMeals</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menu">Our Delicious Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="py-5 text-center">
+      <div class="container">
+        <h1>Welcome to SuperMeals</h1>
+        <p class="lead">Your destination for delicious food!</p>
+        <a href="#" class="btn btn-primary btn-lg">Order Now</a>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 text-center bg-light">
+      <div class="container">
+        <h2 class="mb-5">Our Services</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="service-item">
+              <img src="img/1.png" alt="Outdoor Catering" class="img-fluid" />
+              <h3>Outdoor Catering</h3>
+              <p>Filling every occasion with great food and service.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-item">
+              <img src="img/2.png" alt="Bulk Ordering" class="img-fluid" />
+              <h3>Bulk Ordering</h3>
+              <p>The more you order the less you pay.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-item">
+              <img src="img/3.png" alt="Home Delivery" class="img-fluid" />
+              <h3>Home Delivery</h3>
+              <p>Enjoy delicious food in the comfort of your home or office.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-5 text-center">
+      <div class="container">
+        <h2 class="mb-5">Our Delicious Menu</h2>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="menu-item">
+              <img src="img/burger.jpeg" alt="Burger" class="img-fluid" />
+              <h3>Burger</h3>
+              <p>$5.99</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="menu-item">
+              <img src="img/pizza.jpeg" alt="Pizza" class="img-fluid" />
+              <h3>Pizza</h3>
+              <p>$8.99</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="menu-item">
+              <img src="img/sandwich.jpg" alt="Sandwich" class="img-fluid" />
+              <h3>Sandwich</h3>
+              <p>$6.49</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="menu-item">
+              <img src="img/pasta.jpeg" alt="Pasta" class="img-fluid" />
+              <h3>Pasta</h3>
+              <p>$9.99</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservations" class="py-5 text-center bg-light">
+      <div class="container">
+        <h2 class="mb-5">Reservations</h2>
+        <form id="reservationForm">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="form-control form-control-lg"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="form-control form-control-lg"
+            />
+          </div>
+          <div class="form-group">
+            <label for="date">Date:</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              required
+              class="form-control form-control-lg"
+            />
+          </div>
+          <div class="form-group">
+            <label for="time">Time:</label>
+            <input
+              type="time"
+              id="time"
+              name="time"
+              required
+              class="form-control form-control-lg"
+            />
+          </div>
+          <div class="form-group">
+            <label for="guests">Number of Guests:</label>
+            <input
+              type="number"
+              id="guests"
+              name="guests"
+              min="1"
+              required
+              class="form-control form-control-lg"
+            />
+          </div>
+          <input
+            type="submit"
+            class="btn btn-primary btn-lg reserve"
+            value="Submit Reservation"
+          />
+        </form>
+      </div>
+    </section>
+
+    <!-- Contact/Review Section -->
+    <section id="contact" class="py-5 text-center bg-light">
+      <div class="container">
+        <h2 class="mb-5">Contact Us / Reviews</h2>
+        <ul id="customerReviews">
+          <!-- Reviews Content -->
+        </ul>
+        <form id="reviewForm">
+          <div class="form-group">
+            <label for="nameReview">Name:</label>
+            <input
+              type="text"
+              id="nameReview"
+              name="nameReview"
+              required
+              class="form-control form-control-lg"
+            />
+          </div>
+          <div class="form-group">
+            <label for="contactReview">Contact Number:</label>
+            <input
+              type="tel"
+              id="contactReview"
+              name="contactReview"
+              required
+              class="form-control form-control-lg"
+            />
+          </div>
+          <div class="form-group">
+            <label for="review">Leave a Review:</label><br />
+            <textarea
+              id="review"
+              name="review"
+              rows="4"
+              cols="50"
+              required
+              class="form-control form-control-lg"
+            ></textarea
+            ><br />
+          </div>
+          <input
+            type="submit"
+            class="btn btn-primary btn-lg"
+            value="Submit Review"
+          />
+        </form>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-5 text-center bg-light">
+      <div class="container">
+        <h2 class="mb-5">Location</h2>
+        <div id="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120573.4201943621!2d72.76239958342151!3d19.198723242888086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7c0f8df521d%3A0x289bfd6b5c6448c7!2sBarbeque%20Nation%20-%20Mumbai%20-%20Kandivali!5e0!3m2!1sen!2sin!4v1715096003176!5m2!1sen!2sin"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center bg-dark text-white">
+      <div class="container">
+        <p>&copy; 2024 SuperMeals. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+      // JavaScript code for adding functionality
+      document
+        .getElementById("reservationForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          // Code to handle reservation form submission
+          alert("Reservation submitted successfully!");
+        });
+
+      document
+        .getElementById("reviewForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          // Code to handle review form submission
+          var name = document.getElementById("nameReview").value;
+          var contact = document.getElementById("contactReview").value;
+          var review = document.getElementById("review").value;
+          var reviewsList = document.getElementById("customerReviews");
+          var li = document.createElement("li");
+          li.textContent =
+            "Name: " + name + ", Contact: " + contact + ", Review: " + review;
+          reviewsList.appendChild(li);
+          document.getElementById("nameReview").value = ""; // Clear the name field after submission
+          document.getElementById("contactReview").value = ""; // Clear the contact field after submission
+          document.getElementById("review").value = ""; // Clear the review textarea after submission
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar header section -->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">My Portfolio</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#experience">Experience</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main hero banner -->
+<section id="home" class="hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="intro">
+          <h3 class="greet-heading">Hello, I'm</h3>
+          <h1 class="my-heading">Your Name</h1>
+          <h4 class="sub-heading">
+            A Software Engineer with a Passion for Coding
+          </h4>
+          <div class="intro-buttons">
+            <button class="btn btn-primary">Hire Me</button>
+            <button class="btn btn-outline-primary">
+              <a href="resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="coding.png" class="img-fluid" alt="Portfolio Image" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="about-text">
+              <h2 class="section-heading">About Me</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+                maximus erat, et bibendum leo. Duis ut massa ante. Orci varius
+                natoque penatibus et magnis dis parturient montes, nascetur
+                ridiculus mus.
+              </p>
+              <p>
+                Vestibulum tincidunt odio sit amet dui viverra, non sodales nisi
+                vestibulum. Pellentesque gravida nulla purus, et vehicula lorem
+                pretium sit amet.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="section-heading">Skills</h2>
+            <div class="skills-list">
+              <div class="progress-wrapper">
+                <h3 class="progress-label">HTML5</h3>
+                <div class="progress">
+                  <div
+                    class="progress-bar html"
+                    role="progressbar"
+                    style="width: 90%"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <div class="progress-wrapper">
+                <h3 class="progress-label">CSS3</h3>
+                <div class="progress">
+                  <div
+                    class="progress-bar css"
+                    role="progressbar"
+                    style="width: 85%"
+                    aria-valuenow="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <div class="progress-wrapper">
+                <h3 class="progress-label">JavaScript</h3>
+                <div class="progress">
+                  <div
+                    class="progress-bar js"
+                    role="progressbar"
+                    style="width: 80%"
+                    aria-valuenow="80"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <div class="progress-wrapper">
+                <h3 class="progress-label">React</h3>
+                <div class="progress">
+                  <div
+                    class="progress-bar react"
+                    role="progressbar"
+                    style="width: 75%"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <div class="progress-wrapper">
+                <h3 class="progress-label">Django</h3>
+                <div class="progress">
+                  <div
+                    class="progress-bar django"
+                    role="progressbar"
+                    style="width: 70%"
+                    aria-valuenow="70"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <h2 class="section-heading mb-4">Experience</h2>
+        <div class="row">
+          <!-- Experience Card 1 -->
+          <div class="col-lg-6 mb-4">
+            <div class="card">
+              <img
+                src="experience1.jpg"
+                class="card-img-top"
+                alt="Experience 1 Image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Software Engineer</h5>
+                <p class="card-text">Company Name 1</p>
+                <p class="card-text">Internship Details</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Card 2 -->
+          <div class="col-lg-6 mb-4">
+            <div class="card">
+              <img
+                src="experience2.jpg"
+                class="card-img-top"
+                alt="Experience 2 Image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Web Developer</h5>
+                <p class="card-text">Company Name 2</p>
+                <p class="card-text">Internship Details</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add more cards as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="section-heading">Contact Me</h2>
+            <div class="contact-form">
+              <form id="contactForm" onsubmit="submitForm(event)">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Your Name"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Your Email"
+                  />
+                </div>
+                <div class="form-group">
+                  <textarea
+                    class="form-control"
+                    rows="5"
+                    placeholder="Your Message"
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary m-3">
+                  Send Message
+                </button>
+              </form>
+            </div>
+            <div id="feedback"></div>
+            <!-- New div to display feedback -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="footer-text">
+              Copyright &copy; 2024 All rights reserved | This portfolio website
+              template is created by Your Name.
+            </p>
+            <ul class="social-links">
+              <li>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      // Function to handle form submission
+      function submitForm(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Display "Submitted" message
+        var feedbackDiv = document.getElementById("feedback");
+        feedbackDiv.textContent = "Submitted";
+      }
+    </script>
+  </body>
+</html>

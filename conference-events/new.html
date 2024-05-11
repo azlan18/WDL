@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Website</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    /* Custom Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+    .jumbotron {
+      background-image: url('random-image-url.jpg'); /* Insert your image URL here */
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 100px 0;
+    }
+    .jumbotron h1 {
+      font-size: 3rem;
+    }
+    .event-section {
+      padding: 50px 0;
+      text-align: center;
+    }
+    .schedule-list {
+      list-style: none;
+      padding: 0;
+    }
+    .schedule-list li {
+      margin-bottom: 20px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .schedule-list li:hover {
+      transform: scale(1.1);
+    }
+    .schedule-list li strong {
+      font-size: 1.2rem;
+    }
+    .speaker-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .speaker-card img {
+      border-radius: 50%;
+      max-width: 100px;
+    }
+    .registration-form {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
+    .map-container {
+      height: 400px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Event Name</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#schedule">Schedule</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#speakers">Speakers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#registration">Registration</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#location">Location</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header Section -->
+<div class="jumbotron">
+  <div class="container">
+    <h1>Event Name</h1>
+    <p>Date - Location</p>
+  </div>
+</div>
+
+<!-- Schedule Section -->
+<section id="schedule" class="event-section">
+  <div class="container">
+    <h2>Schedule</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <ul class="schedule-list">
+          <li><strong>Day 1:</strong></li>
+          <li>9:00 AM - Opening Ceremony</li>
+          <li>10:00 AM - Keynote Speech</li>
+          <li>12:00 PM - Lunch Break</li>
+          <li>3:00 PM - Workshop Session 1</li>
+          <li>6:00 PM - Networking Event</li>
+        </ul>
+        <ul class="schedule-list">
+          <li><strong>Day 2:</strong></li>
+          <li>9:00 AM - Panel Discussion</li>
+          <li>11:00 AM - Speaker Session</li>
+          <li>1:00 PM - Lunch Break</li>
+          <li>4:00 PM - Workshop Session 2</li>
+          <li>7:00 PM - Closing Ceremony</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Speaker Section -->
+<section id="speakers" class="event-section">
+  <div class="container">
+    <h2>Speakers</h2>
+    <div class="row">
+      <!-- Speaker Card -->
+      <div class="col-md-4">
+        <div class="speaker-card">
+          <img src="random-image-url.jpg" alt="Speaker Image"> <!-- Insert speaker image URL here -->
+          <h3>Speaker Name</h3>
+          <p>Job Title</p>
+          <p>Speaker Bio</p>
+        </div>
+      </div>
+      <!-- Repeat speaker card for each speaker -->
+      <div class="col-md-4">
+        <div class="speaker-card">
+          <img src="random-image-url.jpg" alt="Speaker Image"> <!-- Insert speaker image URL here -->
+          <h3>Speaker Name</h3>
+          <p>Job Title</p>
+          <p>Speaker Bio</p>
+        </div>
+      </div>
+      <!-- Repeat speaker card for each speaker -->
+      <div class="col-md-4">
+        <div class="speaker-card">
+          <img src="random-image-url.jpg" alt="Speaker Image"> <!-- Insert speaker image URL here -->
+          <h3>Speaker Name</h3>
+          <p>Job Title</p>
+          <p>Speaker Bio</p>
+        </div>
+      </div>
+      <!-- Repeat speaker card for each speaker -->
+    </div>
+  </div>
+</section>
+
+<!-- Registration Section -->
+<section id="registration" class="event-section">
+  <div class="container">
+    <h2>Registration</h2>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="registration-form">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" class="form-control" id="phone">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Location Section -->
+<section id="location" class="event-section">
+  <div class="container">
+    <h2>Location</h2>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="map-container">
+          <!-- Google Maps iframe -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d160293.86059302415!2d-74.07681079999999!3d40.7127753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1631798753323!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="text-center py-4">
+  <p>&copy; 2024 Event Name. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

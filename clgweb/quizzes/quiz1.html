@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>College Portal - Quiz 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">College Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../lessons.html">Lessons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Quizzes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../profile.html">Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <h1>Quiz 1: Lesson 1</h1>
+        
+        <!-- Quiz Form -->
+        <form id="quizForm">
+            <!-- Question 1 -->
+            <div class="mb-4">
+                <h4>Question 1: What is the main focus of Lesson 1?</h4>
+                <div>
+                    <input type="radio" name="question1" value="A" id="q1a">
+                    <label for="q1a">A. Advanced topics in the course</label><br>
+                    <input type="radio" name="question1" value="B" id="q1b">
+                    <label for="q1b">B. Introduction to the course</label><br>
+                    <input type="radio" name="question1" value="C" id="q1c">
+                    <label for="q1c">C. Case studies and applications</label><br>
+                    <input type="radio" name="question1" value="D" id="q1d">
+                    <label for="q1d">D. Course objectives and outcomes</label><br>
+                </div>
+            </div>
+            
+            <!-- Question 2 -->
+            <div class="mb-4">
+                <h4>Question 2: Which of the following is not part of Lesson 1?</h4>
+                <div>
+                    <input type="radio" name="question2" value="A" id="q2a">
+                    <label for="q2a">A. Basic concepts and definitions</label><br>
+                    <input type="radio" name="question2" value="B" id="q2b">
+                    <label for="q2b">B. Overview of the course</label><br>
+                    <input type="radio" name="question2" value="C" id="q2c">
+                    <label for="q2c">C. Introduction to major topics</label><br>
+                    <input type="radio" name="question2" value="D" id="q2d">
+                    <label for="q2d">D. Hands-on coding exercises</label><br>
+                </div>
+            </div>
+            
+            <!-- Add more questions similarly -->
+            
+            <!-- Submit Button -->
+            <button type="button" class="btn btn-primary" onclick="submitQuiz()">Submit</button>
+        </form>
+        
+        <!-- Feedback Section -->
+        <div id="feedback" class="mt-4"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 College Portal. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>Contact: info@college.com | Tel: 123-456-7890</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function submitQuiz() {
+            // Define the correct answers
+            const correctAnswers = {
+                question1: 'B',
+                question2: 'D',
+                // Add more correct answers for additional questions here
+            };
+
+            // Retrieve user answers from the form
+            const userAnswers = {
+                question1: document.querySelector('input[name="question1"]:checked')?.value,
+                question2: document.querySelector('input[name="question2"]:checked')?.value,
+                // Retrieve more user answers for additional questions here
+            };
+
+            // Calculate the score and display feedback
+            let score = 0;
+            let totalQuestions = Object.keys(correctAnswers).length;
+
+            for (let question in correctAnswers) {
+                if (userAnswers[question] === correctAnswers[question]) {
+                    score++;
+                }
+            }
+
+            const feedback = document.getElementById("feedback");
+            const percentageScore = (score / totalQuestions) * 100;
+            feedback.innerHTML = `<p>You scored ${score} out of ${totalQuestions} (${percentageScore.toFixed(2)}%).</p>`;
+        }
+    </script>
+</body>
+
+</html>

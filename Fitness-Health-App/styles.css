@@ -1,0 +1,47 @@
+#hero {
+    background-image: url("https://source.unsplash.com/1500x300/?health");
+    background-size: cover;
+    background-position: center;
+    color: #333;
+  }
+  
+  #hero h1 {
+    font-size: 3rem;
+  }
+  
+  #services .card {
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  #services .card:hover {
+    transform: scale(1.05);
+  }
+  
+  #services .card-title {
+    font-size: 1.5rem;
+  }
+  
+  #appointments {
+    background-image: url("https://source.unsplash.com/1500x1200/?medicine");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+  }
+  
+  #blog .card {
+    transition: transform 0.3s;
+  }
+  
+  #blog .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  #contact .card {
+    height: 100%;
+  }
+  
+  #contact .card-title {
+    font-size: 1.5rem;
+  }
+  

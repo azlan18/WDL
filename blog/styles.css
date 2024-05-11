@@ -1,0 +1,85 @@
+/* Custom Styling */
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    margin-bottom: 20px;
+}
+
+/* Navbar links */
+.navbar a {
+    color: white;
+    margin-right: 15px;
+}
+
+.navbar a.active {
+    border-bottom: 2px solid white;
+}
+
+/* Main Content */
+.container {
+    padding: 20px;
+}
+
+/* Author Profile */
+.author-profile {
+    margin-bottom: 20px;
+}
+
+.author-profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.author-profile h4 {
+    margin-top: 20px;
+}
+
+/* Card */
+.card {
+    margin-bottom: 20px;
+}
+
+.card h5 {
+    font-weight: bold;
+}
+
+/* Form */
+.form-control {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    background-color: #343a40;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer .list-unstyled {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Social Media Icons */
+.social-media-icons li {
+    display: inline;
+    margin-right: 10px;
+}

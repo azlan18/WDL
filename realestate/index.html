@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Estate Website</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Custom CSS */
+      /* Navbar */
+      .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      /* Property Listings */
+      .property-card .card-img-top {
+        height: 200px; /* Adjust as needed */
+        object-fit: cover;
+      }
+
+      /* Property Details Modal */
+      #propertyModal .modal-dialog {
+        max-width: 800px; /* Adjust as needed */
+      }
+
+      /* Search Filter */
+      #searchForm {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      /* Contract Form */
+      #contractForm {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      /* Footer */
+      .footer {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Real Estate</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Property</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Details</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Property Listings -->
+    <section class="container my-5">
+      <h2 class="text-center mb-4">Property Listings</h2>
+      <div class="row">
+        <!-- Property Cards -->
+        <div class="col-md-6">
+          <div class="card mb-4">
+            <img src="https://source.unsplash.com/300x300/?house" class="card-img-top" alt="Property 1" />
+            <div class="card-body">
+              <h5 class="card-title">Property 1</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#propertyModal"
+                data-property="1"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card mb-4">
+            <img src="https://source.unsplash.com/300x300/?villa" class="card-img-top" alt="Property 2" />
+            <div class="card-body">
+              <h5 class="card-title">Property 2</h5>
+              <p class="card-text">
+                Sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#propertyModal"
+                data-property="2"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Add more property cards as needed -->
+      </div>
+    </section>
+    <!-- Photo Gallery -->
+    <section class="container-fluid bg-light py-5">
+      <h2 class="text-center mb-4">Photo Gallery</h2>
+      <div class="row">
+        <!-- Property Cards -->
+        <div class="col-md-3">
+          <div class="card mb-4">
+            <img src="https://source.unsplash.com/300x300/?house" class="card-img-top" alt="Gallery 1" />
+            <div class="card-body">
+              <h5 class="card-title">Property 1</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-4">
+            <img src="https://source.unsplash.com/300x300/?home" class="card-img-top" alt="Gallery 2" />
+            <div class="card-body">
+              <h5 class="card-title">Property 2</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-4">
+            <img src="https://source.unsplash.com/300x300/?Bungalows" class="card-img-top" alt="Gallery 3" />
+            <div class="card-body">
+              <h5 class="card-title">Property 3</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-4">
+            <img src="https://source.unsplash.com/300x300/?home" class="card-img-top" alt="Gallery 4" />
+            <div class="card-body">
+              <h5 class="card-title">Property 4</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Property Details -->
+    <section class="container my-5">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="https://source.unsplash.com/300x300/?home" class="img-fluid" alt="Property 1" />
+        </div>
+        <div class="col-md-6">
+          <h2>Property 1 Details</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            gravida, eros in interdum rhoncus, sapien est ultricies libero, nec
+            tristique dui turpis vel lorem.
+          </p>
+          <ul>
+            <li>Location: Lorem ipsum</li>
+            <li>Price: $XXX,XXX</li>
+            <li>Bedrooms: 3</li>
+            <!-- Add more details -->
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="container my-5">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" class="form-control" id="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                class="form-control"
+                id="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-center py-3">
+      <div class="container">
+        <p>&copy; 2024 Real Estate</p>
+      </div>
+    </footer>
+
+    <!-- Property Details Modal -->
+    <div
+      class="modal fade"
+      id="propertyModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="propertyModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="propertyModalLabel">
+              Property Details
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Property details will be dynamically added here -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

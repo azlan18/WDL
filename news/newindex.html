@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News App</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="main-nav container flex">
+        <a href="index.html" onclick="reload()" class="company-logo">
+          <img src="newslogo.jpg" alt="company logo" />
+        </a>
+        <div class="nav-links">
+          <ul class="flex">
+            <li
+              class="hover-link nav-item"
+              id="ipl"
+              onclick="onNavItemClick('ipl')"
+            >
+              IPL
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="politics"
+              onclick="onNavItemClick('politics')"
+            >
+              Politics
+            </li>
+            <li class="hover-link nav-item">
+              <a href="#contact">Contact Us</a>
+            </li>
+            <!-- Link to Contact Us section -->
+            <li class="hover-link nav-item">
+              <a href="about.html">About Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="search-bar flex">
+          <input
+            id="search-text"
+            type="text"
+            class="news-input"
+            placeholder="e.g. Science"
+          />
+          <button id="search-button" class="search-button">Search</button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section id="featured-stories">
+        <h2>Featured Stories</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card mb-4">
+              <img src="photo1.jpg" class="card-img-top" alt="news-image" />
+              <div class="card-body">
+                <h5 class="card-title">This is the Title</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                  magni odit sint maiores non iusto dicta asperiores laboriosam
+                  eos pariatur.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card mb-4">
+              <img
+                src="https://via.placeholder.com/400x200"
+                class="card-img-top"
+                alt="news-image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Another Title</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                  magni odit sint maiores non iusto dicta asperiores laboriosam
+                  eos pariatur.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Add more featured stories here -->
+        </div>
+      </section>
+
+      <section id="news">
+        <h2>IPL News</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card mb-4">
+              <img src="photo1.jpg" class="card-img-top" alt="news-image" />
+              <div class="card-body">
+                <h5 class="card-title">IPL News Title 1</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                  magni odit sint maiores non iusto dicta asperiores laboriosam
+                  eos pariatur.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card mb-4">
+              <img
+                src="https://via.placeholder.com/400x200"
+                class="card-img-top"
+                alt="news-image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">IPL News Title 2</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                  magni odit sint maiores non iusto dicta asperiores laboriosam
+                  eos pariatur.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Add more IPL news here -->
+        </div>
+
+        <h2>Politics News</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card mb-4">
+              <img src="photo1.jpg" class="card-img-top" alt="news-image" />
+              <div class="card-body">
+                <h5 class="card-title">Politics News Title 1</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                  magni odit sint maiores non iusto dicta asperiores laboriosam
+                  eos pariatur.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card mb-4">
+              <img
+                src="https://via.placeholder.com/400x200"
+                class="card-img-top"
+                alt="news-image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Politics News Title 2</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                  magni odit sint maiores non iusto dicta asperiores laboriosam
+                  eos pariatur.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Add more politics news here -->
+        </div>
+      </section>
+
+      <section id="contact">
+        <!-- Contact Us section -->
+        <h2>Contact Us</h2>
+        <p>
+          If you have any questions or inquiries, please fill out the form below
+          or contact us via email or phone:
+        </p>
+        <form>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea
+              class="form-control"
+              id="message"
+              name="message"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <address>
+          Email: info@example.com<br />
+          Phone: 123-456-7890
+        </address>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 News App. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

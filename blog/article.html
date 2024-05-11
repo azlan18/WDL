@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Title | Blogging Platform</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">Blog Name</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="author_profiles.html">Author Profiles</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="article-page">
+            <h2>Article Title</h2>
+            <p>by Author Name on Date</p>
+            <div class="content">
+                <p>Full article content goes here...</p>
+                <!-- Add more content as needed -->
+            </div>
+
+            <!-- Comment Section -->
+            <div id="comments" class="mt-5">
+                <h3>Comments</h3>
+                <ul class="list-group mb-3">
+                    <!-- Existing comments -->
+                    <li class="list-group-item">User1: Great article Azlan!</li>
+                    <li class="list-group-item">User2: I learned a lot from this article.</li>
+                    <!-- Add more comments as needed -->
+                </ul>
+                <!-- Comment form -->
+                <form id="commentForm" class="mt-3">
+                    <div class="mb-3">
+                        <label for="comment" class="form-label">Add a comment:</label>
+                        <textarea class="form-control" id="comment" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer class="footer bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <!-- Footer Links -->
+            <div class="col-md-6">
+                <h5 class="text-uppercase">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Contact</a></li>
+                    <li><a href="#" class="text-white">Privacy Policy</a></li>
+                    <li><a href="#" class="text-white">Terms of Service</a></li>
+                    <li><a href="#" class="text-white">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <!-- Social Media Links -->
+            <div class="col-md-6 text-md-end">
+                <h5 class="text-uppercase">Follow Us</h5>
+                <ul class="list-unstyled d-flex justify-content-md-end">
+                    <li class="me-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    </li>
+                    <li class="me-3">
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i> Twitter</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                    </li>
+                    <!-- Add more social media links as needed -->
+                </ul>
+            </div>
+        </div>
+        <!-- Footer Copyright -->
+        <div class="text-center mt-3">
+            <p>&copy; 2024 Blogging Platform. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        // JavaScript for interactivity
+        document.getElementById('commentForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const comment = document.getElementById('comment').value;
+            const commentsList = document.getElementById('comments').querySelector('ul');
+            // Add the new comment to the list
+            const newComment = document.createElement('li');
+            newComment.className = 'list-group-item';
+            newComment.textContent = `User 3: ${comment}`;
+            commentsList.appendChild(newComment);
+            // Clear the form
+            document.getElementById('comment').value = '';
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - News App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="main-nav container flex">
+          <a href="index.html" onclick="reload()" class="company-logo">
+            <img src="newslogo.jpg" alt="company logo" />
+          </a>
+          <div class="nav-links">
+            <ul class="flex">
+              <li
+                class="hover-link nav-item"
+                id="ipl"
+                onclick="onNavItemClick('ipl')"
+              >
+                IPL
+              </li>
+              <li
+                class="hover-link nav-item"
+                id="finance"
+                onclick="onNavItemClick('finance')"
+              >
+                Finance
+              </li>
+              <li
+                class="hover-link nav-item"
+                id="politics"
+                onclick="onNavItemClick('politics')"
+              >
+                Politics
+              </li>
+              <li class="hover-link nav-item">
+                <a href="about.html">About Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="search-bar flex">
+            <input
+              id="search-text"
+              type="text"
+              class="news-input"
+              placeholder="e.g. Science"
+            />
+            <button id="search-button" class="search-button">Search</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <div class="container">
+          <h2>About Us</h2>
+          <p>
+            Welcome to News App, your trusted source for the latest news and
+            updates on various topics including IPL, Finance, Politics, and
+            more.
+          </p>
+          <p>
+            At News App, our mission is to provide accurate and timely
+            information to our readers, helping them stay informed about the
+            world around them.
+          </p>
+          <p>
+            Our dedicated team of journalists and editors work tirelessly to
+            deliver high-quality news content that matters.
+          </p>
+          <p>
+            Whether you're a sports enthusiast, a finance professional, or a
+            political observer, News App has something for everyone.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 News App. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

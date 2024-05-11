@@ -1,0 +1,101 @@
+<style>
+body {
+  padding-top: 70px; /* Adjust top padding to leave space for the navbar */
+}
+
+.navbar {
+  background-color: #343a40; /* Navbar background color */
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #ffffff; /* Navbar link color */
+}
+
+.nav-link:hover {
+  color: #cccccc; /* Navbar link hover color */
+}
+
+.hero {
+  background-color: #f8f9fa; /* Hero section background color */
+  padding: 100px 0; /* Adjust padding as needed */
+}
+
+.section-heading {
+  margin-bottom: 30px; /* Add space below section headings */
+}
+
+.footer {
+  background-color: #343a40; /* Footer background color */
+  color: #ffffff; /* Footer text color */
+  padding: 20px 0; /* Adjust padding as needed */
+}
+
+.footer-text {
+  margin-bottom: 0; /* Remove margin bottom for footer text */
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links li {
+  display: inline-block;
+  margin-right: 10px; /* Add space between social icons */
+}
+
+.social-links li:last-child {
+  margin-right: 0; /* Remove margin from last social icon */
+}
+
+.social-links a {
+  color: #ffffff; /* Social icon color */
+}
+
+.social-links a:hover {
+  color: #cccccc; /* Social icon hover color */
+}
+
+/* Custom CSS for progress bars */
+.progress-wrapper {
+  margin-bottom: 20px;
+}
+
+.progress-label {
+  margin-bottom: 5px;
+}
+
+.progress {
+  height: 20px;
+}
+
+.progress-bar {
+  transition: width 0.6s ease;
+}
+
+/* Set individual progress bar colors */
+.progress-bar.html {
+  background-color: #f16529;
+}
+
+.progress-bar.css {
+  background-color: #2965f1;
+}
+
+.progress-bar.js {
+  background-color: #f0db4f;
+}
+
+.progress-bar.react {
+  background-color: #61dbfb;
+}
+
+.progress-bar.django {
+  background-color: #092e20;
+}
+</style>
